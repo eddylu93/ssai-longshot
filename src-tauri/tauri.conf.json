@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "SSAI 长截图工具",
+  "version": "1.0.0",
+  "identifier": "com.sansheng.picsewdesktop.preview",
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devUrl": "http://127.0.0.1:1420",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "macOSPrivateApi": true,
+    "windows": [
+      {
+        "title": "SSAI 长截图工具",
+        "width": 440,
+        "height": 560,
+        "minWidth": 360,
+        "minHeight": 420
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "copyright": "Copyright (c) 2026 sansheng",
+    "shortDescription": "SSAI desktop long screenshot utility",
+    "active": true,
+    "targets": "all",
+    "icon": [],
+    "macOS": {
+      "signingIdentity": "-"
+    }
+  }
+}
+

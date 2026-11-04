@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>聊天记录回归样本</title><style>
+*{box-sizing:border-box}body{margin:0;background:#e7ebf0;font:16px/1.6 system-ui;color:#222}header{height:64px;background:white;display:flex;align-items:center;justify-content:space-between;padding:12px 32px;border-bottom:1px solid #ccc}button{padding:8px 16px;font:inherit;background:#176b5f;color:white;border:0;border-radius:4px}#chat{height:calc(100vh - 64px);overflow:auto;padding:24px 32px;max-width:900px;margin:auto;background:#f1f3f5;scroll-behavior:auto}.message{display:flex;gap:12px;margin:0 0 24px;align-items:flex-start}.message.right{flex-direction:row-reverse}.avatar{background:#176b5f;color:white;width:40px;height:40px;display:grid;place-items:center;flex:0 0 40px;border-radius:4px}.bubble{max-width:580px;padding:12px 16px;background:white;border-radius:4px}.right .bubble{background:#ccebd7}.number{color:#555;font-size:12px;margin-bottom:4px}p{margin:0}
+</style></head><body><header><strong>聊天记录回归样本</strong><button id="click" onclick="this.textContent='点击 '+(++window.clickCount)">点击 0</button></header><section id="chat"></section><script>
+window.clickCount=0;
+const messages=['请核对本批记录的序号与数量。','已收到，明天上午整理完整清单。','这条消息包含两行内容，用于检查文字是否被接缝截断。','不同气泡长度、头像与空白区域均需要完整保留。','文件已经发出，待确认后继续下一步。'];
+for(let i=1;i<=100;i++){let row=document.createElement('div');row.className='message'+(i%2?'':' right');row.innerHTML=`<div class="avatar">${i%2?'甲':'乙'}</div><div class="bubble"><div class="number">记录 ${String(i).padStart(3,'0')} · 2026/11/03</div><p>${messages[(i-1)%messages.length]} 序号 ${i}，数量 ${137+i*11}。</p>${i%3===0?'<p>附注：每一行都必须按原始像素对齐。</p>':''}</div>`;document.querySelector('#chat').appendChild(row);}
+</script></body></html>

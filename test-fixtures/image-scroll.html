@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>含图片拼接回归样本</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 14px system-ui; color: #222; background: #e7ebf0; }
+    header { height: 64px; display: flex; align-items: center; justify-content: space-between; padding: 12px 32px; background: #fff; }
+    select { padding: 6px; font: inherit; }
+    #chat { width: 900px; max-width: 100%; height: calc(100vh - 64px); overflow: auto; margin: auto; scroll-behavior: auto; background: #f1f3f5; }
+    #source { display: block; width: 900px; max-width: none; height: auto; }
+  </style>
+</head>
+<body>
+  <header><strong>含图片拼接回归样本</strong><select id="case" aria-label="图片场景">
+    <option value="repeated-thumbnail">重复缩略图</option>
+    <option value="smooth-image">平滑图片</option>
+    <option value="mixed-photo-text">图文混排</option>
+  </select></header>
+  <section id="chat"><img id="source" src="/output/image-stitch-audit/fixed/repeated-thumbnail/expected.png" alt="重复缩略图原始长图"></section>
+  <script>
+    document.getElementById('case').addEventListener('change', (event) => {
+      const name = event.target.value;
+      const image = document.getElementById('source');
+      image.src = '/output/image-stitch-audit/fixed/' + name + '/expected.png';
+      image.alt = name;
+      document.getElementById('chat').scrollTop = 0;
+    });
+  </script>
+</body>
+</html>

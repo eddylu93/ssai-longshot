@@ -1,0 +1,27 @@
+SSAI original code: Copyright (c) 2026 sansheng.
+MIT license. See ssai-LICENSE.txt. Third-party code retains the licenses below.
+
+OpenCV.js 4.12.0 (distributed as @techstark/opencv-js 4.12.0-release.1)
+https://github.com/TechStark/opencv-js
+https://opencv.org/
+Apache License 2.0. See opencv-LICENSE.txt.
+The package's OpenCV JavaScript build is sourced from https://docs.opencv.org/4.12.0/opencv.js.
+
+pixelmatch 7.1.0
+https://github.com/mapbox/pixelmatch
+ISC license. See pixelmatch-LICENSE.txt.
+
+wayscrollshot band stitching core (locally adapted)
+https://github.com/jswysnemc/wayscrollshot
+Revision: 703474ad7b94a504306d7a93d21668ee162ebf1c
+MIT license. See wayscrollshot-band-LICENSE.txt.
+Local changes: Rust adapter, output limits, RGB placement verification,
+ambiguity rejection, exact adjacent-search refinement, strict gap recovery,
+and restoring detection state after rejected frames.
+
+xcap 0.9.8 (locally patched)
+https://github.com/nashaofu/xcap
+Apache License 2.0. See xcap-LICENSE.txt.
+Local changes: macOS continuous capture at 15 fps without cursor/click effects.
+
+No Snow Shot, ScrollSnap, eSearch or ShareX source code is incorporated in this build.

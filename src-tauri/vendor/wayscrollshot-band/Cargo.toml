@@ -1,0 +1,10 @@
+[package]
+name = "wayscrollshot-band"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+publish = false
+
+[dependencies]
+image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
+log = "0.4"
